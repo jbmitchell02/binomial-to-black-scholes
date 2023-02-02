@@ -3,6 +3,7 @@
 
 import math
 
+
 # S: Current stock price
 # K: Strike Price
 # n: Number of periods in binomial model
@@ -52,10 +53,12 @@ def binomial_price(S, K, n, T, sigma, r_f, type={'call', 'put'}):
             height -= 1
         return df[0][0]
 
+
 # z: z-score
 def cdf(z):
     p = 1 + math.erf(z / math.sqrt(2.0))
     return (p / 2)
+
 
 # S: Current stock price
 # K: Strike Price
